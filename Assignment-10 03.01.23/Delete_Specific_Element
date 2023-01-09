@@ -1,0 +1,51 @@
+package arrayexamples;
+
+import java.util.Scanner;
+
+public class DeletespecificElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int arr[]=new int[20];
+		int  num = 0,pos;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("How many elements do you want to enter");
+		int ele=sc.nextInt();
+		System.out.println("Enter the elements");
+		for(int i1=0;i1<ele;i1++)
+		{
+			arr[i1]=sc.nextInt();
+		}
+		System.out.println("Before deletion array");
+		for(int i1=0;i1<ele;i1++)
+		{
+			System.out.println(arr[i1]+" ");
+		}
+		System.out.println();
+		System.out.println("Enter which position you want to insert");
+		pos=sc.nextInt();
+
+		if(pos>ele+1||pos<0)
+		{
+			System.out.println("Invallid position");
+
+		}
+		else {
+			System.out.println("After Deletion (with out another array");
+			for(int i1=0;i1<ele-1;i1++) {
+				arr[i1]=arr[i1+1];
+
+			}
+			arr[pos+1]=num;
+			ele--;
+		}
+
+
+
+	for(int i1=0;i1<ele;i1++)
+	{
+		System.out.println(arr[i1]+" ");
+	}
+
+}
+}
