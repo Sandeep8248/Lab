@@ -1,0 +1,41 @@
+package arrayexamples;
+import java.util.Scanner;
+
+public class SearchNumber {
+
+	public static void main(String[] args) {
+		int size,i = 0;
+		Scanner sc=new Scanner(System.in);
+		boolean flag=false;
+		System.out.println("Enter the size of arrray");
+		size=sc.nextInt();
+		int ar[]=new int[size];
+		System.out.println("Enter "+size+" elements:");
+		for(int i1=0;i1<size;i1++)
+		{
+			ar[i1]=sc.nextInt();
+		}
+
+		System.out.println("Enter which element you want to search");
+		int search=sc.nextInt();
+
+		for(int i1=0;i1<size;i1++)
+		{
+			if(ar[i1]==search)
+			{
+				flag=true;
+				break;
+			}
+		}
+		if(flag==true)
+		{
+			System.out.println("The  element "+search+" is present in:"+(i+1));
+		}
+		else {
+			System.out.println("Data not found in array");
+		}
+
+
+	}
+
+}
