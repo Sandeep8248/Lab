@@ -1,0 +1,18 @@
+Class LinearSerch string{
+
+   public static void main(string[] args){
+
+    string[] name={"Deepak","Rahul","Amit","Viroa"};
+
+       str item="Deepak";
+   for(i=0;i<a.length;i++)
+{
+if(a[i].equalsto(item)
+{
+   system.out.println("item present in"+i" index position");
+  } 
+}
+if(temp==0){
+system.out.println("item not present in the inex position");
+ }
+}
