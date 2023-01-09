@@ -1,0 +1,45 @@
+package arrayexamples;
+import java.util.Scanner;
+
+public class ArrayCreation {
+
+
+
+	public static void main(String[] args) {
+		//creating an array in compile time
+		int arr[]= {2,5,7,8};
+		String name[]= {"Rahul","Sunita","Lokesh","Priya"};
+		char c[]= {'a','b','c'};
+		System.out.println(name.length);
+		System.out.println(arr.length);
+
+		for(int i=0;i<c.length;i++)
+		{
+			System.out.println(c[i]);
+		}
+		System.out.println();
+		Scanner sc = new Scanner(System.in);
+		//creating an array in run time
+		int arr1[]=new int[5];
+		System.out.println("Enter the array element");
+		for(int i=0;i<arr1.length;i++)
+		{
+			arr1[i]= sc.nextInt();
+		}
+		System.out.println("Printing using for loop");
+		for(int i=0;i<arr1.length;i++)
+		{
+			System.out.println(arr[i]);
+		}
+		System.out.println("Printing using for-each loop");
+		for(int var:arr1)
+		{
+			System.out.println("var");
+		}
+
+
+
+
+	}
+
+}
