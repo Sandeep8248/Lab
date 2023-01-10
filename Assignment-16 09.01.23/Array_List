@@ -1,0 +1,30 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class ArrayListex6 {
+
+	public static void main(String[] args) {
+		
+		//generic version Collection to Array
+		ArrayList<String> a1=new ArrayList<String>();
+		a1.add("riya");
+		a1.add("aaditya");
+		a1.add(" ananya");
+		
+		
+		String[] s=new String[a1.size()];
+		a1.toArray(s);
+		for(String ss:s)
+		{
+			System.out.println(ss);
+		}
+		
+		
+		
+
+	
+
+	}
+
+}
