@@ -1,0 +1,20 @@
+package collection;
+
+import java.util.ArrayList;
+
+public class ArrayList2 {
+
+	public static void main(String[] args) {
+		ArrayList objs=new ArrayList();
+		
+		objs.add(Integer.valueOf(10));
+		objs.add("ratan");
+		objs.add("null");
+		objs.add("10");
+		System.out.println("objs");
+		System.out.println(objs.toString());
+	
+
+	}
+
+}
