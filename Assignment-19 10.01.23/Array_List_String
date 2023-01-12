@@ -1,0 +1,65 @@
+package ArrayExample;
+
+import java.util.*;
+import java.util.Scanner;
+
+
+public class ArrayLIstString {
+
+	public static void main(String[] args) {
+		
+		
+			ArrayList<String> alist = new ArrayList<String>();
+			Scanner sc=new Scanner(System.in);
+			String str;
+			System.out.println("Enter the String");
+			
+		
+	
+		
+		for (int i=0;i<5;i++)
+		{
+			str=sc.next();
+			alist.add(str);
+			
+		}
+		System.out.println("String are: " +alist);
+		System.out.println("Printing using for loop:");
+		for(int i=0;i<alist.size();i++)
+		{
+			System.out.println(alist.get(i));
+		}
+		//adding a string
+		
+		alist.add(1, "SANDEEP");
+		System.out.println(alist);
+		System.out.println("Enter the index where you want to enter String");
+		int index =sc.nextInt();
+		System.out.println("Enter the String: ");
+		str=sc.next();
+		alist.add(index, str);
+		System.out.println(alist);
+		
+		//replace a string
+		alist.set(4, "sunita");
+		System.out.println(alist);
+		
+		
+		//remove a string
+		alist.remove(0);
+		System.out.println("After removing index 0:"+alist );
+		System.out.println(alist.remove("Arnab"));
+		
+		
+		
+		System.out.println("original arraylist: "+ alist);
+		ArrayList<String>alist2=new ArrayList<String>();
+		alist2.addAll(alist);
+		System.out.println("Copied arraylist: "+alist2);
+		
+		
+	}
+	
+	
+
+}
