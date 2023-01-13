@@ -1,0 +1,88 @@
+package batchapplication;
+
+import java.util.Scanner;
+
+public class BatchService {
+	
+	static Scanner sc=new Scanner(System.in);
+	static Batch batch[]=new Batch[20];
+	static int id;
+	static String name;
+	static String email;
+	static long phone;
+	static int bindex=0;
+	
+	//student info taking java couse
+	public static void batchStudentInfo()
+	{
+		System.out.println("Enter the student ID:");
+		id=sc.nextInt();
+		
+		System.out.println(" ");
+		
+		System.out.println("Enter the student Name:");
+		name=sc.nextLine();
+		
+		
+		System.out.println("Enter the student Email:");
+		email=sc.nextLine();
+		
+		
+		System.out.println("Enter the student Phone:");
+		phone=sc.nextLong();
+		
+		batch[bindex]=new Batch(id, name, phone, email);
+		bindex++;
+		System.out.println("Student details addeded sucessfully!!");
+	}
+	
+	public static void batchsStudentshowInfo()
+	{
+		System.out.println("Student ID:"+batch[bindex].getStdid());
+		System.out.println("Student Name:"+batch[bindex].getStdname());
+		System.out.println("Student Email:"+batch[bindex].getEmail());
+		System.out.println("Student Phone:"+batch[bindex].getPhone());
+		System.out.println("Course Name:JAVA");
+		System.out.println("...............");
+
+	}
+	
+	//update student info
+	public static void updateJavaStudentInfo()
+	{
+		System.out.println("Enter Student id:");
+		id=sc.nextInt();
+		for(int i=0;i<bindex;i++)
+		{
+			if(id==batch[i].getStdid())
+			{
+				System.out.println("Enter student id to update:");
+				id=sc.nextInt();
+				
+				sc.nextLine();
+				System.out.println("Enter student name to update:");
+				name=sc.nextLine();
+				
+				
+				System.out.println("Enter student phone no to update:");
+				phone=sc.nextLong();
+				
+				sc.nextLine();
+				System.out.println("Enter the student email to update:");
+				email=sc.nextLine();
+			
+				batch[i]=new Batch(id, name, phone, email);
+				System.out.println("Update Successfully!!");
+				
+		
+						
+			}
+			else
+			{
+				throw new StudentNotFoundationException("Student details not found!!");
+			}
+		}
+	}
+
+}
+
